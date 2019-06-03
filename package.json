@@ -1,0 +1,15 @@
+{
+    "name": "social-choice",
+    "version": "0.0.0",
+    "description": "Social choice algorithms and voting rules",
+    "homepage": "https://github.com/ninofiliu/social-choice",
+    "repository": "github:ninofiliu/social-choice",
+    "bugs": "https://github.com/ninofiliu/social-choice/issues",
+    "author": {
+        "name": "Nino Filiu",
+        "url": "https://ninofiliu.com"
+    },
+    "license": "MIT",
+    "main": "./dist/main.js",
+    "browser": "./dist/browser.js"
+}
