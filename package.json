@@ -13,9 +13,11 @@
   "main": "./dist/main.js",
   "browser": "./dist/browser.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "test": "mocha"
   },
   "devDependencies": {
+    "mocha": "^6.1.4",
     "webpack": "^4.32.2"
   }
 }
