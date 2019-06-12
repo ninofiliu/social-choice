@@ -20,4 +20,4 @@ Providing social choice algorithms and voting rules through an NPM package
     - ️️️️️️✔️ preference profile object, in `Profile`
     - ️️️️️️✔️ C1 graph, in `Profile.pGraph`
     - ️️️️️️✔️ C2 graph, in `Profile.nGraph`
-    - 🎫 Condorcet winner, in `Profile.cw`
+    - ✔️ Condorcet winner, in `Profile.cw`

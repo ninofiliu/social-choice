@@ -35,4 +35,7 @@ describe('Profile', () => {
             ]
         );
     });
+    it('Can compute the Condorcet winner', () => {
+        assert.equal(profile.cw, null);
+    })
 });

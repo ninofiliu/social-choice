@@ -25,6 +25,7 @@ export default class Profile {
                 x==y ? null : this.nGraph[x][y]>this.nGraph[y][x]
             ))
         ));
+        this.cw = this.getCW();
     }
 
     /**
