@@ -21,3 +21,10 @@ Providing social choice algorithms and voting rules through an NPM package
     - ️️️️️️✔️ C1 graph, in `Profile.pGraph`
     - ️️️️️️✔️ C2 graph, in `Profile.nGraph`
     - ✔️ Condorcet winner, in `Profile.cw`
+    - 🚀 social choice functions
+        - ✔️ plurality
+        - ...
+    - 💬 social welfare functions
+        - ...
+    - 💬 social preference functions
+        - ...
