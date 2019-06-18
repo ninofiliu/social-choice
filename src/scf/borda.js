@@ -1,5 +1,5 @@
 import Profile from '../profile';
-import scoringRule from './scoring-rule';
+import scoring from './scoring';
 
 /**
  * Borda's rule
@@ -9,6 +9,6 @@ import scoringRule from './scoring-rule';
  */
 const borda = profile => {
     const rScores = (new Array(profile.m)).fill().map((_,j) => profile.m-j-1);
-    return scoringRule(profile, rScores);
+    return scoring(profile, rScores);
 }
 export default borda;

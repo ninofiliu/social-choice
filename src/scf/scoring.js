@@ -5,7 +5,7 @@ import Profile from '../profile';
  * @param {Profile} profile 
  * @param {number[]} rScores scores of alternatives: `rScores[0]` = score of best alternative
  */
-const scoringRule = (profile, rScores) => {
+const scoring = (profile, rScores) => {
     const aScores = (new Array(profile.m)).fill(0);
     profile.r.forEach(({nb, ranks}) => {
         ranks.forEach((value, j) => {
@@ -17,4 +17,4 @@ const scoringRule = (profile, rScores) => {
     aScores.forEach((score, j) => score==maxScore && winners.push(j));
     return winners;
 }
-export default scoringRule;
+export default scoring;

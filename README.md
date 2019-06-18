@@ -37,10 +37,10 @@ Providing social choice algorithms and voting rules through an NPM package
         - ✔️ plurality
         - 💬 plurality with runoff
         - 💬 anti-plurality
-        - 🎫 Borda's rule
+        - ✔️ Borda's rule
         - 💬 instant runoff
         - 💬 sequential majority comparisons
-        - 🎫 scoring rule
+        - ✔️ scoring rule
         - 💬 approval voting
         - 💬 Black's rule
         - 💬 Nanson's rule
