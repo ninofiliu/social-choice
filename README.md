@@ -20,14 +20,37 @@ Providing social choice algorithms and voting rules through an NPM package
     - ✔️ Node support
     - 🎫 browser support
 - Features
-    - ️️️️️️✔️ preference profile object, in `Profile`
-    - ️️️️️️✔️ C1 graph, in `Profile.pGraph`
-    - ️️️️️️✔️ C2 graph, in `Profile.nGraph`
-    - ✔️ Condorcet winner, in `Profile.cw`
+    - 🚀 preference profiles
+        - ️️️️️️✔️ preference profile object, in `Profile`
+        - ️️️️️️✔️ C1 graph, in `Profile.pGraph`
+        - ️️️️️️✔️ C2 graph, in `Profile.nGraph`
+        - ✔️ Condorcet winner, in `Profile.cw`
+        - 💬 `Max(R_N, A)`
+        - 💬 dominions
+        - 💬 dominators
+    - 💬 domains detection
+        - 💬 single-caved
+        - 💬 single-peaked
+        - 💬 dichotomous
+        - 💬 value-restricted
     - 🚀 social choice functions
         - ✔️ plurality
+        - 💬 plurality with runoff
+        - 💬 anti-plurality
+        - 💬 Borda's rule
+        - 💬 instant runoff
+        - 💬 sequential majority comparisons
+        - 💬 scoring rule
+        - 💬 approval voting
+        - 💬 Black's rule
+        - 💬 Nanson's rule
+        - 💬 top cycle
+        - 💬 Copeland’s rule
+        - 💬 maximin
+        - 💬 Young's rule
         - ...
     - 💬 social welfare functions
         - ...
     - 💬 social preference functions
+        - 💬 Kemeny's rule
         - ...
