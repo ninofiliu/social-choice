@@ -1,6 +1,6 @@
 {
   "name": "social-choice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Social choice algorithms and voting rules",
   "homepage": "https://github.com/ninofiliu/social-choice",
   "repository": "github:ninofiliu/social-choice",
@@ -10,15 +10,17 @@
     "url": "https://ninofiliu.com"
   },
   "license": "MIT",
-  "main": "./dist/main.js",
-  "browser": "./dist/browser.js",
+  "main": "./commonjs",
+  "browser": "./esmodule",
   "scripts": {
-    "build": "webpack",
+    "build": "./node_modules/typescript/bin/tsc && webpack",
     "test": "mocha"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "mocha": "^6.1.4",
-    "webpack": "^4.32.2"
+    "typescript": "^3.5.2",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.4"
   }
 }

@@ -1,30 +1,10 @@
-// @ts-nocheck
-const common = {
+module.exports = {
     devtool: 'source-map',
-    mode: 'development',
+    mode: 'production',
     output: {
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/esmodule`,
+        filename: 'index.js',
         library: 'social-choice',
         libraryTarget: 'umd'
-    }
-}
-
-const main = {
-    ...common,
-    output: {
-        ...common.output,
-        filename: 'main.js',
     },
-    target: 'node',
-}
-
-const browser = {
-    ...common,
-    output: {
-        ...common.output,
-        filename: 'browser.js',
-    },
-    target: 'web',
-}
-
-module.exports = [main, browser];
+};

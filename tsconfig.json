@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "outDir": "commonjs",
+        "module": "commonjs"
+    },
+    "include": ["src/**/*"]
+}
