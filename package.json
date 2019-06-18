@@ -14,7 +14,7 @@
   "browser": "./esmodule",
   "scripts": {
     "build": "./node_modules/typescript/bin/tsc && webpack",
-    "test": "mocha"
+    "test": "mocha --bail"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
