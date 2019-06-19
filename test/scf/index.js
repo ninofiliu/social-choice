@@ -5,6 +5,13 @@ const expected = require('./expected');
 describe('SCF', () => {
     const profiles = expected.map(e => new sc.Profile(e.r));
     it(
+        'Anti-plurality',
+        () => assert.deepEqual(
+            profiles.map(p => sc.scf.antiPlurality(p)),
+            expected.map(e => e.antiPlurality)
+        )
+    );
+    it(
         'Borda',
         () => assert.deepEqual(
             profiles.map(p => sc.scf.borda(p)),

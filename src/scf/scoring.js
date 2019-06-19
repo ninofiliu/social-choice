@@ -4,6 +4,7 @@ import Profile from '../profile';
  * General implementation of a scoring rule
  * @param {Profile} profile 
  * @param {number[]} rScores scores of alternatives: `rScores[0]` = score of best alternative
+ * @returns {number[]}
  */
 const scoring = (profile, rScores) => {
     const aScores = (new Array(profile.m)).fill(0);

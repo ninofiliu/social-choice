@@ -4,6 +4,7 @@ exports.__esModule = true;
  * General implementation of a scoring rule
  * @param {Profile} profile
  * @param {number[]} rScores scores of alternatives: `rScores[0]` = score of best alternative
+ * @returns {number[]}
  */
 var scoring = function (profile, rScores) {
     var aScores = (new Array(profile.m)).fill(0);

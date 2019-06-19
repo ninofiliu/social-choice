@@ -37,7 +37,7 @@ Providing social choice algorithms and voting rules through an NPM package
     - 🚀 social choice functions
         - ✔️ plurality
         - 💬 plurality with runoff
-        - 💬 anti-plurality
+        - ✔️ anti-plurality
         - ✔️ Borda's rule
         - 💬 instant runoff
         - 💬 sequential majority comparisons

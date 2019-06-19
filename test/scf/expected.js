@@ -9,5 +9,6 @@ module.exports = [
         plurality: [0,1,2],
         borda: [0,1,2],
         scoring: {rScores: [10,15,-5], results: [0,1,2]},
+        antiPlurality: [0,1,2],
     }
 ];
