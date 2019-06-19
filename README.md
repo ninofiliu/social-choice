@@ -28,6 +28,7 @@ Providing social choice algorithms and voting rules through an NPM package
         - 💬 `Max(R_N, A)`
         - 💬 dominions
         - 💬 dominators
+        - ✔️ readable summary
     - 💬 domains detection
         - 💬 single-caved
         - 💬 single-peaked

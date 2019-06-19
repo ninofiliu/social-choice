@@ -53,6 +53,56 @@ var Profile = /** @class */ (function () {
             if (winAll)
                 return x;
         }
+        return null;
+    };
+    /**
+     * The profile, as a readable string
+     * @returns {string}
+     */
+    Profile.prototype.summary = function () {
+        var _this = this;
+        var headers = this.r.map(function (x) { return x.nb.toString(); });
+        var maxHeaderLen = Math.max.apply(Math, headers.map(function (s) { return s.length; }));
+        headers = headers.map(function (s) { return s + (new Array(maxHeaderLen - s.length)).fill(' ').join(''); });
+        /** @type {number[][]} */
+        var inverseRanks = (new Array(this.r.length)).fill().map(function () {
+            return (new Array(_this.m)).fill().map(function () {
+                return [];
+            });
+        });
+        var _loop_1 = function (i) {
+            this_1.r[i].ranks.forEach(function (rank, j) {
+                inverseRanks[i][rank].push(j);
+            });
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.r.length; i++) {
+            _loop_1(i);
+        }
+        inverseRanks = inverseRanks.map(function (line) { return line.map(function (arr) { return arr.join(' '); }); });
+        var _loop_2 = function (rank) {
+            var maxLen = Math.max.apply(Math, (new Array(this_2.r.length)).fill().map(function (_, i) { return inverseRanks[i][rank].length; }));
+            for (var i = 0; i < this_2.r.length; i++) {
+                inverseRanks[i][rank] += (new Array(maxLen - inverseRanks[i][rank].length)).fill(' ').join('');
+            }
+        };
+        var this_2 = this;
+        for (var rank = 0; rank < this.m; rank++) {
+            _loop_2(rank);
+        }
+        var contents = inverseRanks.map(function (line) { return line.join(' : '); });
+        /** @type {string} */
+        var readableProfile = (new Array(this.r.length)).fill()
+            .map(function (_, i) { return headers[i] + " | " + contents[i]; })
+            .join('\n');
+        return [
+            (new Array(readableProfile.split('\n')[0].length)).fill('-').join(''),
+            readableProfile,
+            (new Array(readableProfile.split('\n')[0].length)).fill('-').join(''),
+            "n: " + this.n,
+            "m: " + this.m,
+            "Condorcet winner: " + this.cw
+        ].join('\n');
     };
     return Profile;
 }());

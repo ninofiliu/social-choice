@@ -19,6 +19,14 @@ module.exports = [
             [true,false,null]
         ],
         cw: null,
+        summary: `-------------
+2 | 0 : 1 : 2
+2 | 2 : 0 : 1
+2 | 1 : 2 : 0
+-------------
+n: 6
+m: 3
+Condorcet winner: null`
     },
     {
         // french profile
@@ -42,6 +50,17 @@ module.exports = [
             [false,null,false],
             [false,false,null],
         ],
-        cw: null
+        cw: null,
+        summary: `-------------
+1 | 0 : 1 : 2
+1 | 0 : 2 : 1
+1 | 1 : 0 : 2
+1 | 2 : 0 : 1
+1 | 1 : 2 : 0
+1 | 2 : 1 : 0
+-------------
+n: 6
+m: 3
+Condorcet winner: null`
     },
 ];

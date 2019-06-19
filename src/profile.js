@@ -59,5 +59,50 @@ export default class Profile {
             }
             if (winAll) return x;
         }
+        return null;
+    }
+
+    /**
+     * The profile, as a readable string
+     * @returns {string}
+     */
+    summary() {
+        const headers = this.r.map(x => x.nb.toString());
+        const maxHeaderLen = Math.max(...headers.map(s => s.length));
+        headers = headers.map(s => s+(new Array(maxHeaderLen-s.length)).fill(' ').join(''));
+
+        /** @type {number[][]} */
+        const inverseRanks = (new Array(this.r.length)).fill().map(() => 
+            (new Array(this.m)).fill().map(() => 
+                []
+            )
+        );
+        for (let i=0; i<this.r.length; i++) {
+            this.r[i].ranks.forEach((rank, j) => {
+                inverseRanks[i][rank].push(j);
+            })
+        }
+        inverseRanks = inverseRanks.map(line => line.map(arr => arr.join(' ')));
+        for (let rank=0; rank<this.m; rank++) {
+            let maxLen = Math.max(...(new Array(this.r.length)).fill().map((_,i) => inverseRanks[i][rank].length));
+            for (let i=0; i<this.r.length; i++) {
+                inverseRanks[i][rank]+=(new Array(maxLen-inverseRanks[i][rank].length)).fill(' ').join('');
+            }
+        }
+        const contents = inverseRanks.map(line => line.join(' : '));
+
+        /** @type {string} */
+        const readableProfile = (new Array(this.r.length)).fill()
+            .map((_,i) => `${headers[i]} | ${contents[i]}`)
+            .join('\n');
+        
+        return [
+            (new Array(readableProfile.split('\n')[0].length)).fill('-').join(''),
+            readableProfile,
+            (new Array(readableProfile.split('\n')[0].length)).fill('-').join(''),
+            `n: ${this.n}`,
+            `m: ${this.m}`,
+            `Condorcet winner: ${this.cw}`
+        ].join('\n');
     }
 }
