@@ -40,7 +40,7 @@ Providing social choice algorithms and voting rules through an NPM package
         - ✔️ anti-plurality
         - ✔️ Borda's rule
         - 💬 instant runoff
-        - 💬 sequential majority comparisons
+        - ✔️ sequential majority comparisons
         - ✔️ scoring rule
         - 💬 approval voting
         - 💬 Black's rule
@@ -51,7 +51,7 @@ Providing social choice algorithms and voting rules through an NPM package
         - 💬 Young's rule
         - ...
     - 💬 social welfare functions
-        - 💬 scoring rules
+        - ✔️ scoring rules
         - ...
     - 💬 social preference functions
         - 💬 Kemeny's rule
