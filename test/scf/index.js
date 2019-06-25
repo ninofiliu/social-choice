@@ -32,4 +32,11 @@ describe('SCF', () => {
             expected.map(e => e.scoring.results)
         )
     );
+    it(
+        'SMC',
+        () => assert.deepEqual(
+            profiles.map((p, i) => sc.scf.smc(p, expected[i].smc.order)),
+            expected.map(e => e.smc.results)
+        )
+    )
 })
